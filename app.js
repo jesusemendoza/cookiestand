@@ -92,14 +92,13 @@ var seaCenter = {
     return Math.round(this.randomCustomer() * this.avg);
   },
   saleprintout: function() {
-    var output = [];
     for(var i = 0; i < 16; i++) {
       if (i < 15) {
-        output.push (Math.round(this.avg * this.randomCustomer()));
-        this.totalDay += this.cookieSales();
-        this.salesResults.push(this.cookieSales());
+        var cookieSale = this.cookieSales();
+        this.totalDay += cookieSale;
+        this.salesResults.push(cookieSale);
         var newLi = document.createElement('li');
-        var newContent = document.createTextNode(this.hours[i] + ': ' + this.cookieSales() + ' cookies');
+        var newContent = document.createTextNode(this.hours[i] + ': ' + cookieSale + ' cookies');
         newLi.appendChild(newContent);
         var current = document.getElementById('li3');
         document.body.insertBefore(newLi, current);
@@ -131,14 +130,13 @@ var capHill = {
     return Math.round(this.randomCustomer() * this.avg);
   },
   saleprintout: function() {
-    var output = [];
     for(var i = 0; i < 16; i++) {
       if (i < 15) {
-        output.push (Math.round(this.avg * this.randomCustomer()));
-        this.totalDay += this.cookieSales();
-        this.salesResults.push(this.cookieSales());
+        var cookieSale = this.cookieSales();
+        this.totalDay += cookieSale;
+        this.salesResults.push(cookieSale);
         var newLi = document.createElement('li');
-        var newContent = document.createTextNode(this.hours[i] + ': ' + this.cookieSales() + ' cookies');
+        var newContent = document.createTextNode(this.hours[i] + ': ' + cookieSale + ' cookies');
         newLi.appendChild(newContent);
         var current = document.getElementById('li4');
         document.body.insertBefore(newLi, current);
@@ -158,8 +156,8 @@ capHill.saleprintout();
 
 var alki = {
   min: 2,
-  max: 16,
-  avg: 4.6,
+  max: 24,
+  avg: 1.2,
   salesResults: [],
   totalDay: 0,
   hours: ['6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'],
