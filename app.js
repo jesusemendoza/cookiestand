@@ -1,7 +1,7 @@
 'use strict';
 
 var stores = [];
-var hours = [ '6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
+var hours = [ '6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm', 'Total'];
 
 function Store(name, min, max, avg) {
   this.name = name;
@@ -52,7 +52,7 @@ Store.tableHours = function() {
   var tdEl = document.createElement('td');
   tdEl.textContent = '';
   trEl.appendChild(tdEl);
-  for(var i = 0; i < 15; i++) {
+  for(var i = 0; i < 16; i++) {
     tdEl = document.createElement('td');
     var time = hours[i];
     tdEl.textContent = time;
@@ -64,22 +64,27 @@ Store.tableHours();
 
 Store.prototype.saleprintout = function() {
   //gets main table element and assigns it to tblEl
-  var tblEl = document.getElementById('main-table');
-  var tbodyEl = document.createElement('tbody');
-  tbodyEl.id = 'tbod';
-  tblEl.appendChild(tbodyEl);
+  var totalDay = 0;
+  var tableEl = document.getElementById('main-table');
+  var tbody = document.createElement('tbody');
+  tbody.id = 'tbody';
+  tableEl.appendChild(tbody);
   var trEl = document.createElement('tr');
-  tbodyEl.appendChild(trEl);
+  tbody.appendChild(trEl);
   var tdEl = document.createElement('td');
   tdEl.textContent = stores[j].name;
   trEl.appendChild(tdEl);
-  for(var i = 0; i <= 14; i++) {
+  for(var i = 0; i <= 15; i++) {
     var cookieSale = this.cookieSales();
+    totalDay += cookieSale;
     tdEl = document.createElement('td');
     var cookies = cookieSale;
     tdEl.textContent = cookies;
     trEl.appendChild(tdEl);
   }
+  var trTotal = document.createElement('td');
+  tdEl.textContent = totalDay;
+  tableEl.appendChild(trTotal);
 };
 
 for(var j = 0; j < 5; j++){
