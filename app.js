@@ -67,7 +67,7 @@ Store.prototype.saleprintout = function() {
     tdEl.textContent = cookies;
     trEl.appendChild(tdEl);
   }
-  var trTotal = document.createElement('td');
+  var trTotal = document.createElement('tr');
   tdEl.textContent = totalDay;
   tableEl.appendChild(trTotal);
 };
