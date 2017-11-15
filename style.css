@@ -1,0 +1,24 @@
+body {
+ background-color: lightgray;
+}
+
+#main-table {
+ position:fixed;
+ top: 15%;
+ left: 10%;
+ border: 15px solid black;
+ text-align: center;
+
+}
+
+#table-title {
+  position:fixed;
+  top: 4%;
+  left: 32%;
+  border: 5px solid black;
+  text-align: center;
+}
+
+td{
+ border: 1px solid black;
+}
