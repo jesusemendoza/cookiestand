@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel = "stylesheet" href="style.css">
-  <title>Sales</title>
+<head class = "mainheader">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <div class="topnav">
+    <img id = "fish-topnav" src = "assets/salmon.png" alt = "fish picture">
+    <a class="active" href="index.html" target="blank">Home</a>
+    <a class="active" href="sales.html" target="blank">Sales</a>
+  </div>
 </head>
 <body>
+  <main class="container">
+    <section class = "three-column">
+    </section >
+    <section>
+      
+    </section>
     <h1 id = "table-title">Daily Sales Report</h1>
-    <table id="main-table">
-    </table>
+    <table id="main-table"></table>
+    <form id="main-form">
+      <p>Store Name</p>
+      <input type = "text" name = "name"  maxlength="15 "placeholder="Enter New Store Name">
+      <p>Minimum sales per hour</p>
+      <input type = "number" name = "min" min = "0" max = "150" placeholder="    Min">
+      <p>Maximum sales per hour</p>
+      <input type = "number" name ="max"  min = "0" max = "150" placeholder="     Max">
+      <p>Average sales per transaction</p>
+      <input type = "number" name = "avg" min = "0" max = "50" placeholder="     Avg">
+      <br><br>
+
+     <button type="submit">SUBMIT</button>
+   </form>
+ </main>
   <script src="app.js"></script>
 </body>
 </html>
