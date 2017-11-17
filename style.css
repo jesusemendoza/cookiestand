@@ -1,9 +1,51 @@
+/*restets everything*/
+*{
+  position: static;
+  font-size: 1.6vw;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  box-sizing: border-box;
+}
+.topnav {
+ overflow: hidden;
+ background-color: #F8F8FF ;
+ position: fixed;
+ background-position: right;
+ top: 0%;
+ opacity: 0.7;
+ z-index: 10;
+ display: inline;
+}
+
+.topnav a {
+ color: black;
+ text-align: left;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 17px;
+ font-family: 'Open Sans', sans-serif;
+ letter-spacing: 5px;
+ font-weight: bold;
+}
+
+.topnav a:hover {
+ background-color: #ddd;
+ color: black;
+}
+header, footer {
+width: 100%;
+height: 10%;
+background: #333;
+color: #ddd;
+}
+
 body {
  background-color: lightgray;
 }
 
 #main-table {
- position:relative;
+ position:static;
  top: 15%;
  left: 6%;
  border-collapse: collapse;
@@ -16,6 +58,7 @@ left: 6%;
 border-collapse: collapse;
 text-align: center;
 padding: 15px;
+width: 20%;
 }
 
 td:nth-child(odd){
@@ -28,6 +71,7 @@ td:nth-child(odd){
 #table-title {
   position:relative;
   top: 4%;
+
   border: 5px solid black;
   text-align: center;
 }
@@ -38,7 +82,35 @@ input {
   font-size: 12px;
 }
 
-td{
- border: 1px solid black;
- padding: 6px;
+main {
+width: 90%;
+margin: 0 auto;
 }
+
+/* section for 2-columns */
+.two-column {
+display: inline-block;
+width: calc(100% / 3);
+margin: 5% 0;
+margin-left: calc((100% / 3) / 3);
+vertical-align: middle;
+}
+
+
+/* section for 3-colums */
+ .three-column {
+display: inline-block;
+width: calc(100% / 4);
+margin: 5% 0;
+margin-left: calc((100% / 4) / 4);
+}
+
+/* section {
+display: inline-block;
+width: calc(100% / 5);
+margin: 5% 0;
+margin-left: calc((100% / 5) / 5);
+}
+p {
+padding: 2%;
+} */

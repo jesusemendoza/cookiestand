@@ -1,7 +1,7 @@
 'use strict';
 
 var stores = [];
-var hours = [ '6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm', 'Total'];
+var hours = [ '6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm', 'Total'];
 
 function Store(name, min, max, avg) {
   this.name = name;
@@ -37,7 +37,7 @@ Store.tableHours = function() {
   var tdEl = document.createElement('td');
   tdEl.textContent = '';
   trEl.appendChild(tdEl);
-  for(var i = 0; i < 16; i++) {
+  for(var i = 0; i < hours.length; i++) {
     tdEl = document.createElement('td');
     var time = hours[i];
     tdEl.textContent = time;
