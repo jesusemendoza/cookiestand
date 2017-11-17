@@ -73,7 +73,9 @@ text-align: center;
 padding: 15px;
 width: 20%;
 }
-
+td, tr {
+  border: 1px black;
+}
 td:nth-child(odd){
   background-color: silver;
   color: white;
@@ -122,13 +124,14 @@ margin-left: calc((100% / 4) / 4);
   max-width: 350px;
 }
 
-.prices {
+.under-img-txt {
   text-align: center;
   padding: 10px;
 }
 
-#empty-section {
-   border-top: 2px solid rgba(0, 0, 0, .2);
+.section-title {
+  text-align: center;
+  font-size: 3.6vw;
 }
 
 /* section {
